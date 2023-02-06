@@ -81,3 +81,28 @@ for (const teamMember of teamMembers) {
         </div>
     </div>`;
 }
+
+// BONUS 1:
+// Trasformare la stringa foto in una immagine effettiva
+// BONUS 2:
+// Organizzare i singoli membri in card/schede
+
+const cardContainer = document.getElementById("cardContainer");
+// const cardImg = document.getElementById("cardImg");
+// const cardImg = document.getElementById("cardImg");
+
+for (const teamMember of teamMembers) {
+  cardContainer.innerHTML += `
+  <div class="card" style="width: 18rem">
+        <img src="" class="card-img-top" alt="" id="cardImg"/>
+        <div class="card-body">
+          <h5 class="card-title">Team Member</h5>
+          <p class="card-text">
+            name : ${teamMember.name}, <br>
+            role : ${teamMember.role}, <br>
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>`;
+}
+// cardImg.innerHTML += `<img src="${teamMember.pic}" />`;
