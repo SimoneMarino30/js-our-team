@@ -24,3 +24,60 @@
 // Angela Lopez	 Social Media Manager angela-lopez-social-media-manager.jpg
 // Scott Estrada	Developer			scott-estrada-developer.jpg
 // Barbara Ramos Graphic Designer		barbara-ramos-graphic-designer.jpg
+
+// MILESTONE 0:
+// Creare l’array di oggetti con le informazioni fornite.
+const teamMembers = [
+  {
+    name: "Wayne Barnett",
+    role: "Founder & CEO",
+    pic: "wayne-barnett-founder-ceo.jpg",
+  },
+  {
+    name: "Angela Caroll",
+    role: "Chief Editor",
+    pic: "angela-caroll-chief-editor.jpg",
+  },
+  {
+    name: "Walter Gordon",
+    role: "Office Manager",
+    pic: "walter-gordon-office-manager.jpg",
+  },
+  {
+    name: "Angela Lopez",
+    role: "Social Media Manager",
+    pic: "angela-lopez-social-media-manager.jpg",
+  },
+  {
+    name: "Scott Estrada",
+    role: "Developer",
+    pic: "scott-estrada-developer.jpg",
+  },
+  {
+    name: "Barbara Ramos",
+    role: "Graphic Designer",
+    pic: "barbara-ramos-graphic-designer.jpg",
+  },
+];
+// MILESTONE 1:
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+for (let teamMember in teamMembers) {
+  console.log(teamMembers[teamMember]);
+}
+// MILESTONE 2:
+// Stampare le stesse informazioni su DOM sottoforma di stringhe
+const writeDom = document.getElementById("writeDOM");
+
+for (const teamMember of teamMembers) {
+  writeDom.innerHTML += `
+  <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Team Member</h5>
+          <p class="card-text">
+            name : ${teamMember.name}, <br>
+            role : ${teamMember.role}, <br>
+            pic : ${teamMember.pic}
+          </p>
+        </div>
+    </div>`;
+}
